@@ -8,7 +8,7 @@
 
 <!-- modrinth_exclude.end -->
 
-Restores the original Zombified Piglin loot mechanic like it was in 1.21.
+Restores the original Zombified Piglin loot mechanic like it was in 1.21
 
 ## Motivation/Why does this mod exist?
 
