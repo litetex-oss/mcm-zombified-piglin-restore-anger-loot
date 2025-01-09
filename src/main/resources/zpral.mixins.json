@@ -4,6 +4,7 @@
   "package": "net.litetex.zpral.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ZombifiedPiglinMixin"
   ],
   "injectors": {
     "defaultRequire": 1
