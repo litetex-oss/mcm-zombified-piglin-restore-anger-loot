@@ -12,6 +12,7 @@ import net.minecraft.server.world.ServerWorld;
 
 
 @Mixin(ZombifiedPiglinEntity.class)
+@SuppressWarnings("javabugs:S6320")
 public abstract class ZombifiedPiglinMixin
 {
 	@Inject(method = "mobTick",
