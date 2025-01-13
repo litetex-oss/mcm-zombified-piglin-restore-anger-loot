@@ -35,7 +35,7 @@ public abstract class ZombifiedPiglinMixin
 		if(target instanceof final PlayerEntity targetPlayer)
 		{
 			final ZombifiedPiglinEntity current = (ZombifiedPiglinEntity)(Object)this;
-			current.method_66277(targetPlayer, current.age);
+			current.setAttacking(targetPlayer, current.age);
 		}
 	}
 }
