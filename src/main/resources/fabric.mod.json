@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "zombified-piglin-restore-anger-loot",
+  "id": "${id}",
   "version": "${version}",
-  "name": "Zombified Piglin Restore Anger Loot",
-  "description": "Restores the original Zombified Piglin loot mechanic like it was in 1.21",
+  "name": "${name}",
+  "description": "${desc}",
   "authors": [
     "litetex"
   ],
   "contact": {
-    "homepage": "https://github.com/litetex-oss/mcm-zombified-piglin-restore-anger-loot",
-    "sources": "https://github.com/litetex-oss/mcm-zombified-piglin-restore-anger-loot",
-    "issues": "https://github.com/litetex-oss/mcm-zombified-piglin-restore-anger-loot/issues"
+    "homepage": "https://github.com/litetex-oss/mcm-${id}",
+    "sources": "https://github.com/litetex-oss/mcm-${id}",
+    "issues": "https://github.com/litetex-oss/mcm-${id}/issues"
   },
-  "license": "Apache-2.0",
+  "license": "${license_spdx_id}",
   "icon": "assets/icon.png",
   "environment": "*",
   "mixins": [
@@ -26,8 +26,8 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.github_releases": "https://github.com/litetex-oss/mcm-zombified-piglin-restore-anger-loot/releases",
-        "modmenu.modrinth": "https://modrinth.com/mod/zombified-piglin-restore-anger-loot"
+        "modmenu.github_releases": "https://github.com/litetex-oss/mcm-${id}/releases",
+        "modmenu.modrinth": "https://modrinth.com/mod/${id}"
       }
     }
   }
