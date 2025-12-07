@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.ZombifiedPiglin;
+import net.minecraft.world.entity.monster.zombie.ZombifiedPiglin;
 import net.minecraft.world.entity.player.Player;
 
 
@@ -17,7 +17,7 @@ public abstract class ZombifiedPiglinMixin
 {
 	@Inject(method = "customServerAiStep",
 		at = @At(value = "INVOKE",
-			target = "Lnet/minecraft/world/entity/monster/Zombie;customServerAiStep"
+			target = "Lnet/minecraft/world/entity/monster/zombie/Zombie;customServerAiStep"
 				+ "(Lnet/minecraft/server/level/ServerLevel;)V"))
 	protected void mobTick(final ServerLevel world, final CallbackInfo ci)
 	{
@@ -30,8 +30,8 @@ public abstract class ZombifiedPiglinMixin
 	
 	@Inject(method = "setTarget",
 		at = @At(value = "INVOKE",
-			target = "Lnet/minecraft/world/entity/monster/Zombie;setTarget(Lnet/minecraft/world/entity/LivingEntity;)"
-				+ "V"))
+			target = "Lnet/minecraft/world/entity/monster/zombie/Zombie;setTarget"
+				+ "(Lnet/minecraft/world/entity/LivingEntity;)V"))
 	public void setTarget(final LivingEntity target, final CallbackInfo ci)
 	{
 		if(target instanceof final Player targetPlayer)
