@@ -9,6 +9,20 @@
 
 Restores the original Zombified Piglin loot mechanic like it was in 1.21
 
+## Configuration
+
+### Gamerule ``spawn_zombified_piglin_always_with_sword_on_magma_block``
+
+Forces Zombified Piglins to **always** spawn with a sword on magma blocks.<br/>
+The default is ``false``.
+
+_This gamerule exists because_
+* _starting with 1.21.11 Zombified Piglins can spawn with a spear:_
+  * _Piglins with spears can hit each other while attacking, which in turn causes retaliation/infighting and therefore lowering the overall effectiveness of farms_
+  * _The performed charge attack requires a lot more calculations when compared to a "normal" sword attack_
+* _mpost gold farms use magma blocks anyway_
+* _all other gameplay aspects are unaffected_
+
 ## Motivation/Why does this mod exist?
 
 Gold farms got [significantly nerfed](https://bugs.mojang.com/browse/MC-56653) in [25w02a](https://minecraft.wiki/w/Java_Edition_25w02a).
