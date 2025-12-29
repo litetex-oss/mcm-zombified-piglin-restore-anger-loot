@@ -20,7 +20,7 @@ _This gamerule exists because_
 * _starting with 1.21.11 Zombified Piglins can spawn with a spear:_
   * _Piglins with spears can hit each other while attacking, which in turn causes retaliation/infighting and therefore lowering the overall effectiveness of farms_
   * _The performed charge attack requires a lot more calculations when compared to a "normal" sword attack_
-* _mpost gold farms use magma blocks anyway_
+* _most gold farms use magma blocks anyway_
 * _all other gameplay aspects are unaffected_
 
 ## Motivation/Why does this mod exist?
