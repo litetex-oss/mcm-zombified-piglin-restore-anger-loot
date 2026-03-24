@@ -23,7 +23,7 @@
   "mixins": [
     "zpral.mixins.json"
   ],
-  "accessWidener": "zpral.accesswidener",
+  "accessWidener": "zpral.classtweaker",
   "requires": {
     "fabric-api": "*"
   },
