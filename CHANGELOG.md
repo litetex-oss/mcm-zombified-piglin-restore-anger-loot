@@ -1,3 +1,6 @@
+# 1.3.0
+* Updated to 26.1
+
 # 1.2.0
 * Added Gamerule `spawn_zombified_piglin_always_with_sword_on_magma_block`
    * Defaults to `false`
