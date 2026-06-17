@@ -73,7 +73,8 @@ public abstract class ZombifiedPiglinMixin extends ZombieMixin
 		//
 		// We need to get the correct ServerLevelAccessor here because when the world is generating (case B above)
 		// current.level() is not yet ready to getBlockStates which causes a deadlock; see #170 for details
-		final ServerLevelAccessor finalizeSpawnServerLevelAccessor = this.refFinalizeSpawnServerLevelAccessor.get();
+		final ServerLevelAccessor finalizeSpawnServerLevelAccessor =
+			this.refFinalizeSpawnServerLevelAccessor.isBound() ? this.refFinalizeSpawnServerLevelAccessor.get() : null;
 		if(finalizeSpawnServerLevelAccessor != null)
 		{
 			this.maybeSpawnWithGoldSwordOnlyOnMagmaBlock(
