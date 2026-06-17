@@ -17,7 +17,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 public abstract class ZombieMixin
 {
 	@Unique
-	protected ThreadLocal<ServerLevelAccessor> refFinalizeSpawnServerLevelAccessor = new ThreadLocal<>();
+	protected ScopedValue<ServerLevelAccessor> refFinalizeSpawnServerLevelAccessor = ScopedValue.newInstance();
 	
 	@WrapMethod(method = "finalizeSpawn")
 	public SpawnGroupData finalizeSpawn(
@@ -27,15 +27,7 @@ public abstract class ZombieMixin
 		final SpawnGroupData groupData,
 		final Operation<SpawnGroupData> original)
 	{
-		final ServerLevelAccessor previous = this.refFinalizeSpawnServerLevelAccessor.get();
-		this.refFinalizeSpawnServerLevelAccessor.set(level);
-		try
-		{
-			return original.call(level, difficulty, spawnReason, groupData);
-		}
-		finally
-		{
-			this.refFinalizeSpawnServerLevelAccessor.set(previous);
-		}
+		return ScopedValue.where(this.refFinalizeSpawnServerLevelAccessor, level)
+			.call(() -> original.call(level, difficulty, spawnReason, groupData));
 	}
 }
