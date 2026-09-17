@@ -1,3 +1,9 @@
+# 1.4.0
+* Updated to 26.3
+
+# 1.3.2
+* Updated to 26.2
+
 # 1.3.1
 * Fixed a deadlock upon world generation that occurs when `spawn_zombified_piglin_always_with_sword_on_magma_block` is enabled #170
   * <details><summary>Technical explanation:</summary>
