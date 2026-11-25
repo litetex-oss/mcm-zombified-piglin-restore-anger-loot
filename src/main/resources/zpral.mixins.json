@@ -1,9 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.litetex.template-placeholder.mixin",
+  "package": "net.litetex.zpral.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "ZombieMixin",
+    "ZombifiedPiglinMixin"
   ],
   "injectors": {
     "defaultRequire": 1
